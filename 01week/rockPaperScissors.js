@@ -10,7 +10,34 @@ const rl = readline.createInterface({
 
 function rockPaperScissors(hand1, hand2) {
 
-  // Write code here
+    if(hand1===hand2){
+        return "The result is a tie!";
+    }
+    if(hand1==="rock"){
+        if(hand2==="scissors"){
+            return "rock wins";
+        }
+        else{
+            return "paper wins";
+        }
+    }
+    if(hand1==="paper"){
+        if(hand2==="rock"){
+            return "paper wins";
+        }
+        else{
+            return "scissors wins";
+        }
+    }
+    if(hand1==="scissors"){
+        if(hand2==="rock"){
+            return "rock wins";
+        }
+        else{
+            return "scissors wins";
+        }
+    }
+};
 
 }
 
