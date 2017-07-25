@@ -8,12 +8,26 @@ const rl = readline.createInterface({
 });
 
 
-function pigLatin(word) {
+const pigLatin = (word) => {
 
-  // Your code here
-
-}
-
+   const array = word.split('');
+    const vowels = ['a','e','i','o','u'];
+    const newWord = '';
+    for(const i = 0; i < vowels.length-1; i++) {
+        for(const y = 0; y < word.length-1; y++) {
+            if(word[y] === vowels[i]) {
+                for(const x = y; x < word.length; x++){
+                    newWord = newWord + word[x];
+                }
+                for(const n = 0; n < y; n++){ 
+                    newWord = newWord + word[n];
+                }
+                return newWord + "ay";
+            }       
+        }
+    }
+        
+    }
 
 function getPrompt() {
   rl.question('word ', (answer) => {
